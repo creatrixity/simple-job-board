@@ -23,4 +23,4 @@ docker run --name simple-job-board-postgres -e POSTGRES_USER=postgres -e POSTGRE
 
 You may run the application locally in development mode by executing `npm start`
 
-Run the integration test with `npm start`
+Run the integration test with `npm test`
