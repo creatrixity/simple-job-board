@@ -17,6 +17,9 @@ const config = {
   server: {
     port: Number(getEnvVariable("PORT")),
   },
+  database: {
+    host: getEnvVariable("DATABASE_HOST", "localhost"),
+  },
 };
 
 export default config;

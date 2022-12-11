@@ -1,0 +1,16 @@
+version: "3"
+services:
+  test:
+    build: .
+    environment:
+      DATABASE_HOST: db
+    links:
+      - db
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 5uperIn5ecurePa55word
+      POSTGRES_DB: simple-job-board
+    ports:
+      - "5432:5432"

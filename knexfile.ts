@@ -1,5 +1,5 @@
 import type { Knex } from "knex";
-
+import appConfig from "./src/config";
 // Update with your config settings.
 
 const config: { [key: string]: Knex.Config } = {
@@ -24,6 +24,7 @@ const config: { [key: string]: Knex.Config } = {
     connection: {
       user: "postgres",
       password: "5uperIn5ecurePa55word",
+      host: appConfig.database.host,
       port: 5432,
     },
     pool: {
